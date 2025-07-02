@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/ConfessMe");
+mongoose.connect("mongodb+srv://hemantsh00456:jH9n0XZNq1vj2uvl@cluster0.drv1mnr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/confessApp");
 
 const userSchema = new mongoose.Schema({
     name:{
