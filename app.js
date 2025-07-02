@@ -8,6 +8,8 @@ const ejs = require("ejs");
 const path = require("path");
 const postModel = require("./model/post");
 const { log } = require("console");
+require("dotenv").config();
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -126,7 +128,6 @@ app.post("/delete/:id", isLoggedIn, async (req, res) => {
   res.redirect("/confession");
 });
 
-
-    
-
-app.listen(3000);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server running...");
+});
