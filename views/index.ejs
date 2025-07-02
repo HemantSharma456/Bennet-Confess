@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bennett Confession - Register</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center font-poppins px-4">
+
+  <div class="w-full max-w-md">
+
+    <!-- 🔷 Brand Name on Top -->
+    <h1 class="text-center text-white text-4xl font-bold mb-10 drop-shadow">
+      Bennett <span class="text-blue-400">Confess</span>
+    </h1>
+
+    <!-- 🔐 Register Form Card -->
+    <div class="p-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white shadow-xl">
+      <h3 class="text-3xl font-semibold text-center mb-6">Register Here</h3>
+
+      <form action="/register" method="post" class="flex flex-col space-y-4">
+        <input type="text" name="name" placeholder="Enter your name"
+          class="p-3 rounded-lg bg-white/80 text-black placeholder:text-gray-700 focus:outline-none" required />
+
+        <input type="text" name="username" placeholder="Enter your username"
+          class="p-3 rounded-lg bg-white/80 text-black placeholder:text-gray-700 focus:outline-none" required />
+
+        <input type="email" name="email" placeholder="Enter your email"
+          class="p-3 rounded-lg bg-white/80 text-black placeholder:text-gray-700 focus:outline-none" required />
+
+        <input type="password" name="password" placeholder="Enter your password"
+          class="p-3 rounded-lg bg-white/80 text-black placeholder:text-gray-700 focus:outline-none" required />
+
+        <button type="submit"
+          class="mt-4 py-2 rounded-lg bg-blue-400 hover:bg-blue-300 text-black font-semibold transition">
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

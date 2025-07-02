@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bennett Confess - Write</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center px-4 font-poppins">
+
+  <div class="w-full max-w-2xl p-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white shadow-lg">
+    <h2 class="text-3xl font-semibold text-center mb-6">Write Your Confession</h2>
+
+    <form action="/post" method="post" class="flex flex-col space-y-4">
+      <textarea name="content"
+        placeholder="Enter your confession here..."
+        class="w-full h-48 p-4 text-lg text-white placeholder:text-white/60 bg-white/10 border border-white/30 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+        required></textarea>
+
+      <button type="submit"
+        class="py-3 text-lg font-semibold bg-blue-400 hover:bg-blue-300 text-black rounded-lg transition">
+        Add Confession
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>
