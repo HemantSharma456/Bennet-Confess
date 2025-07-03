@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
@@ -8,7 +9,6 @@ const ejs = require("ejs");
 const path = require("path");
 const postModel = require("./model/post");
 const { log } = require("console");
-require("dotenv").config();
 
 
 app.use(express.json());
@@ -45,7 +45,9 @@ app.post("/register" , async(req,res)=>{
     })
     
 });
-
+app.get("/register" , (req,res)=>{
+    res.render("index");
+})
 app.get("/confession" , isLoggedIn, async(req,res)=>{
         let user = await userModel.findOne({email:req.user.email});
         let publicPosts = await postModel.find({ isPublic: true })
