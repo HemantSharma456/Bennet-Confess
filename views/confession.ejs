@@ -31,7 +31,7 @@
       </div>
       <h2 class="text-3xl font-semibold mb-8">Public Confessions</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <% publicPosts.forEach(post => { %>
+        <% publicPosts.slice().reverse().forEach(post => { %>
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-5 text-white hover:scale-[1.01] transition-all duration-200">
             <div class="flex justify-between items-center mb-2">
                 <span class="font-semibold text-blue-400">@<%= post.user.name %></span>
